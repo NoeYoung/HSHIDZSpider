@@ -117,7 +117,7 @@ class Scrapy_Zone(object):
         self.zoneInfo[buildingName] = []
         for name in content["list"]:
             for info in content["list"][name]:
-                if (info["status"] == "02"):
+                if info["status"] == "02":
                     self.zoneInfo[buildingName].append(info["roomName"])
 
     def buildinginfo_analysis(self, content):
